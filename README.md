@@ -1,86 +1,91 @@
-# PrimeTrade Task Management System
+# 🛡️ PrimeTrade: Advanced Operations Terminal
 
-A full-stack, secure, and scalable task management application built as part of the Backend Developer Intern assignment.
-
-## 🚀 Features
-
-### Backend (Primary Focus)
-- **Authentication**: Secure registration and login with JWT and password hashing (bcrypt).
-- **Role-Based Access Control (RBAC)**: Distinct permissions for `user` and `admin` roles.
-- **CRUD APIs**: Full CRUD operations for a "Task" entity.
-- **API Versioning**: All routes prefixed with `/api/v1`.
-- **Validation & Error Handling**: Robust input validation and centralized error handling middleware.
-- **Documentation**: Interactive API documentation powered by Swagger.
-
-### Frontend (Supportive)
-- **Modern Stack**: Built with Next.js, React, and TypeScript.
-- **Premium UI**: Stunning glassmorphism design with Framer Motion animations.
-- **Protected Routes**: Secure dashboard access using Auth Context and JWT.
-- **Dashboard**: Interactive task management with real-time feedback.
+A high-performance, secure, and visually stunning Task Management System engineered for the **PrimeTrade Backend Developer Intern** assignment. This project demonstrates enterprise-level backend architecture integrated with a state-of-the-art management frontend.
 
 ---
 
-## 🛠️ Tech Stack
+## 🚀 Key Features
 
-- **Backend**: Node.js, Express.js, MongoDB (Mongoose)
-- **Frontend**: Next.js 14, React, Tailwind CSS (Style Tokens), Framer Motion, Lucide Icons
-- **Auth**: JSON Web Tokens (JWT), Bcrypt.js
-- **Docs**: Swagger UI, Swagger JSDoc
+### 🔧 Robust Backend (Primary Focus)
+- **Advanced Auth**: Secure user lifecycle (Register/Login) with **JWT** and **Bcrypt** password hashing.
+- **RBAC (Role-Based Access Control)**: Tiered access for `User` and `Admin` classifications. 
+  - *Admins*: Global visibility and management across all operational units.
+  - *Users*: Isolated operational environment for personal tasks.
+- **Entity Management**: Comprehensive CRUD lifecycle for "Task" intelligence.
+- **Enterprise Standards**: 
+  - **API Versioning**: Scalable `/api/v1` architecture.
+  - **Global Error Handling**: Standardized JSON error response middleware.
+  - **Security Suite**: `Helmet` for HTTP header security, `CORS` for cross-origin management.
+- **Interactive Documentation**: Full **Swagger/OpenAPI 3.0** terminal for real-time API testing.
+
+### 💎 Premium Frontend (Supportive)
+- **Next.js 14 Architecture**: Utilizing the latest App Router and Server/Client component paradigms.
+- **Hyper-Modern UI**: Custom **Glassmorphism Design System** built with Vanilla CSS (No generic frameworks).
+- **Dynamic UX**: Powered by `Framer Motion` for fluid structural transitions and micro-animations.
+- **Operational Dashboard**:
+  - **Live Intel Search**: Precision filtering of tasks by keywords.
+  - **Phase Filtering**: Instant status-based task categorization (Pending, In-Progress, Completed).
+  - **Identity Terminal**: Dedicated user profile management for credential updates.
+- **Real-time Feedback**: Integrated `react-hot-toast` for synchronization status alerts.
 
 ---
 
-## 🚦 Getting Started
+## 🛠️ Technology Stack
+
+| Layer | Technologies |
+| :--- | :--- |
+| **Logic** | Node.js, Express.js |
+| **Identity** | JSON Web Tokens, Bcrypt.js |
+| **Memory** | MongoDB Atlas, Mongoose ODM |
+| **Interface** | Next.js 14, React, TypeScript |
+| **Aesthetics** | Vanilla CSS (Nexus Design System), Framer Motion |
+| **Documentation** | Swagger UI, OpenAPI 3.0 |
+
+---
+
+## 🚦 Deployment & Initialization
 
 ### Prerequisites
-- Node.js (v18 or higher)
-- MongoDB instance (Local or Atlas)
+- Node.js (v18.x+)
+- MongoDB Atlas Account
 
-### Backend Setup
-1. Navigate to the `backend` directory:
-   ```bash
-   cd backend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Create a `.env` file based on the provided configuration:
-   ```env
-   PORT=5000
-   MONGODB_URI=your_mongodb_connection_string
-   JWT_SECRET=your_jwt_secret
-   JWT_EXPIRE=24h
-   ```
-4. Start the server:
-   ```bash
-   npm run dev
-   ```
+### Quick Start (Local Environment)
 
-### Frontend Setup
-1. Navigate to the `frontend` directory:
-   ```bash
-   cd frontend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
+#### 1. Backend Synchronization
+```bash
+cd backend
+npm install
+# Configure .env:
+# PORT=5000 | MONGODB_URI=your_atlas_uri | JWT_SECRET=your_secret | JWT_EXPIRE=24h
+npm run dev
+```
+
+#### 2. Frontend Launch
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+### 🌍 Production Deployment
+- **Backend**: Optimized for deployment on **Render** (Root: `/backend`).
+- **Frontend**: Optimized for **Vercel** (Root: `/frontend`).
+- **Critical Config**: Ensure `NEXT_PUBLIC_API_URL` is set in Vercel settings to point to your live Render API.
 
 ---
 
-## 📖 API Documentation
+## 📖 Intelligence & Documentation
 
-Once the backend is running, you can access the Swagger documentation at:
-`http://localhost:5000/api-docs`
+Access the interactive API command center at:
+`http://localhost:5000/api-docs` (Development)
+
+---
+
+## 📈 Enterprise Scaling
+
+For a strategic roadmap on scaling this system to support millions of concurrent operatives, review the **[SCALABILITY.md](./SCALABILITY.md)** document.
 
 ---
 
-## 📈 Scalability
-
-For a detailed note on how this system can be scaled for millions of users, please refer to [SCALABILITY.md](./SCALABILITY.md).
-
----
+**Developed for PrimeTrade Recruitment Assessment.** 
+*Confidentiality Level: Internal*
